@@ -1,6 +1,6 @@
 FROM tiangolo/uvicorn-gunicorn-fastapi
 
-WORKDIR /fastapi-rnd-forest-clf
+WORKDIR /fastapi-rf-clf
 
 COPY . .
 

@@ -5,7 +5,7 @@ import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-MODEL_PATH = os.path.join("model", "rnd_forest_clf.pkl")
+MODEL_PATH = os.path.join("model", "rf_clf.pkl")
 
 app = FastAPI()
 
