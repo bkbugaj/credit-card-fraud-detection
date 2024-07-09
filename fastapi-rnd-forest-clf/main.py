@@ -1,12 +1,11 @@
 import os
 import pickle
 
-import numpy as np
 import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-MODEL_PATH = os.path.join("models", "rnd_forest_clf.pkl")
+MODEL_PATH = os.path.join("model", "rnd_forest_clf.pkl")
 
 app = FastAPI()
 
@@ -20,8 +19,7 @@ class PredictionRequest(BaseModel):
 
 @app.post("/predict")
 async def predict(request: PredictionRequest):
-    inputs = np.array(request.inputs)
-    predictions = model.predict(inputs)
+    predictions = model.predict(request.inputs)
     return {"predictions": predictions.tolist()}
 
 
