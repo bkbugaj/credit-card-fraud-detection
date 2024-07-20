@@ -20,7 +20,7 @@ class PredictionRequest(BaseModel):
 @app.post("/predict")
 async def predict(request: PredictionRequest):
     predictions = model.predict(request.inputs)
-    return {"predictions": predictions.tolist()}
+    return {"predictions": predictions.astype(int).tolist()}
 
 
 if __name__ == "__main__":
