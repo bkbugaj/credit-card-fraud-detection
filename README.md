@@ -84,7 +84,7 @@ docker run -d -p 5000:5000 --name fastapi-rf-clf fastapi-rf-clf
 ### API Endpoint
 
 - `POST /predict`
-  - Input: JSON object containing list of transactions. Each transaction containing transaction features values:
+- Input: JSON object containing list of transactions. Each transaction containing transaction features values:
 <pre style="font-size: 12px;">
     {
       "inputs": [
@@ -93,7 +93,7 @@ docker run -d -p 5000:5000 --name fastapi-rf-clf fastapi-rf-clf
       ]
     }
 </pre>
-  - Output: JSON object with the prediction result (0 - non-fraudulent, 1 - fraudulent).
+- Output: JSON object with the prediction result (0 - non-fraudulent, 1 - fraudulent).
 
 ### Example Request
 ```bash
